@@ -1,0 +1,70 @@
+.flex-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  background-color: white;
+  /* border: 2px solid #ccc; */
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-category {
+  background-color: yellow !important;
+  color: rgb(23, 4, 4);
+  border-color: rgb(0, 0, 0);
+}
+
+.subcat-btn {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  transition: border-color 0.2s ease;
+}
+
+.subcat-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.selected-subcategory {
+  border-bottom: 3px solid yellow;
+  color: black;
+  background-color: none !important;
+}
+
+.product-card {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+
+.product-scroll-container {
+  overflow-y: scroll;
+  display: flex;
+  height: 60vh;
+  flex-direction: column;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-top: 10px;
+  scrollbar-width: none;
+}

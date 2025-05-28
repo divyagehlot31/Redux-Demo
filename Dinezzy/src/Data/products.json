@@ -1,0 +1,217 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "parentId": 7,
+      "name": "Carlsberg",
+      "description": " Smooth, a premium mild beer crafted with the finest European",
+      "price": 4.5,
+      "variants": [
+        {
+          "name": "Half Pint",
+          "price": 4.5
+        },
+        {
+          "name": "Pint",
+          "price": 5.5
+        }
+      ],
+      "extras": [
+        {
+          "name": "Lemonade",
+          "price": 0.75
+        },
+        {
+          "name": "Shandy",
+          "price": 0.75
+        },
+        {
+          "name": "Lime",
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "parentId": 7,
+      "name": "Corona",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 7.5,
+      "variants": [
+        {
+          "name": "Half hproduct",
+          "price": 7.5
+        },
+        {
+          "name": "hproduct",
+          "price": 8.5
+        }
+      ],
+      "extras": [
+        {
+          "name": "Lemonade",
+          "price": 0.75
+        },
+        {
+          "name": "Shandy",
+          "price": 0.75
+        },
+        {
+          "name": "Lime",
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "parentId": 7,
+      "name": "Kingfisher",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 6.5,
+      "variants": [
+        {
+          "name": "Half hproduct",
+          "price": 6.5
+        },
+        {
+          "name": "hproduct",
+          "price": 7.5
+        }
+      ],
+      "extras": [
+        {
+          "name": "Lemonade",
+          "price": 0.75
+        },
+        {
+          "name": "Shandy",
+          "price": 0.75
+        },
+        {
+          "name": "Lime",
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "parentId": 8,
+      "name": "Coke",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 3.0,
+      "variants": [
+        {
+          "name": "Half Pint",
+          "price": 3.0
+        },
+        {
+          "name": "Pint",
+          "price": 4.0
+        }
+      ],
+      "extras": [
+        {
+          "name": "Lemonade",
+          "price": 0.75
+        },
+        {
+          "name": "Shandy",
+          "price": 0.75
+        },
+        {
+          "name": "Lime",
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "parentId": 9,
+      "name": "Absolut",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 6.2,
+      "variants": [
+        {
+          "name": "Half Pint",
+          "price": 6.2
+        },
+        {
+          "name": "Pint",
+          "price": 7.2
+        }
+      ],
+      "extras": [
+        {
+          "name": "Lemonade",
+          "price": 0.75
+        },
+        {
+          "name": "Shandy",
+          "price": 0.75
+        },
+        {
+          "name": "Lime",
+          "price": 0.75
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "parentId": 10,
+      "name": "Chips",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 1.2
+    },
+    {
+      "id": 7,
+      "parentId": 4,
+      "name": "Cheese Balls",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 6.2,
+      "extras": [
+        {
+          "name": "Cheese",
+          "price": 1.75
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "parentId": 4,
+      "name": "Spring Rolls",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 4.45
+    },
+    {
+      "id": 9,
+      "parentId": 5,
+      "name": "Stuffed Bean Burger",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 6.5
+    },
+    {
+      "id": 10,
+      "parentId": 6,
+      "name": "Mattar paneer",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 14.5,
+      "variants": [
+        {
+          "name": "Half",
+          "price": 14.5
+        },
+        {
+          "name": "Full",
+          "price": 16.5
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "parentId": 10,
+      "name": "Banana Chips",
+      "description": "A fully matured beer with an exceptional clarity",
+      "price": 2.5
+    }
+  ]
+}
