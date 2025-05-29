@@ -1,0 +1,22 @@
+@use "./Variables.scss" as vars;
+
+.header {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.add {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+}

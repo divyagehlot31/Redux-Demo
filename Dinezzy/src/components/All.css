@@ -1,31 +1,31 @@
-.flex-row {
+/* .flex-row {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 20px;
-}
+} */
 
-.category-btn {
+/* .category-btn {
   padding: 10px 20px;
   background-color: white;
-  /* border: 2px solid #ccc; */
+  border: 2px solid #ccc;
   cursor: pointer;
   font-weight: bold;
   border-radius: 6px;
   transition: all 0.2s ease;
-}
+} */
 
-.category-btn:hover {
+/* .category-btn:hover {
   background-color: #f0f0f0;
-}
+} */
 
-.selected-category {
+/* .selected-category {
   background-color: yellow !important;
   color: rgb(23, 4, 4);
   border-color: rgb(0, 0, 0);
-}
+} */
 
-.subcat-btn {
+/* .subcat-btn {
   background-color: transparent;
   border: none;
   border-bottom: 3px solid transparent;
@@ -33,10 +33,9 @@
   cursor: pointer;
   font-weight: 500;
   color: #333;
-  transition: border-color 0.2s ease;
-}
+} */
 
-.subcat-scroll {
+/* .subcat-scroll {
   display: flex;
   gap: 10px;
   overflow-x: auto;
@@ -48,17 +47,17 @@
   border-bottom: 3px solid yellow;
   color: black;
   background-color: none !important;
-}
+} */
 
-.product-card {
+/* .product-card {
   border: 2px solid #ddd;
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 16px;
   background-color: #fff;
-}
+} */
 
-.product-scroll-container {
+/* .product-scroll-container {
   overflow-y: scroll;
   display: flex;
   height: 60vh;
@@ -67,4 +66,170 @@
   padding-left: 8px;
   margin-top: 10px;
   scrollbar-width: none;
+} */
+
+/* .product-detail-card {
+  position: relative;
+  background: white;
+  padding: 20px;
+  width: 350px;
+  overflow-y: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.2);
+} */
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
 }
+
+.extras-section {
+  margin-top: 15px;
+}
+
+.extra-option {
+  /* display: flex; 
+  /* flex-direction: column; */
+  margin: 5px 0;
+  /* gap: 80px; */
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.extra-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+
+.quantity-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.quantity-section button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.add-order-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #dff43d;
+  border: 1px solid;
+  border-color: #000000;
+
+  color: rgb(20, 1, 1);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.variant-buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.variant-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  justify-content: space-between;
+  border-radius: 4px;
+  display: flex;
+  font-weight: 500;
+}
+
+.variant-btn:hover {
+  background-color: #cdd018;
+}
+
+.variant-btn.selected {
+  background-color: #e4f196;
+  color: rgb(3, 3, 3);
+  border-color: #000000;
+}
+
+/* .card-overlay {
+  position: relative;
+  top: 0;
+    bottom: 0;
+
+  left: 0;
+  width: 100vw;    
+  height: 100vh; 
+  background: rgba(0, 0, 0, 0.5);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  
+} */
+ /* .card-overlay {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+} */
+
+
+
+/* .card {
+  position: relative;
+  position: absolute;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 53vw;
+  max-height: 80vh;
+  overflow-y: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+} */
+
+
+/* .card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+} */
+
+
+
+/* .modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+} */
+
+

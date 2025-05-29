@@ -1,22 +1,21 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
+import '../styles/Header.scss'
 
 
 const Header = () => {
 
   return (
-    <header className="p-3">
-      <div className="p-2">
+    <header className="header">
         <div>
-          <h4 className="fw-bold">Kings Arms Cardington</h4>
-          <p className="mb-0">
+          <h4 className="title">Kings Arms Cardington</h4>
+          <p className="add">
             134 High Street, Kempston, Bedford,<br />
             Bedfordshire, MK42 7BN
           </p>
         </div>
 
        
-      </div>
     </header>
   );
 };

@@ -1,0 +1,21 @@
+@use "./Variables.scss" as vars;
+@use "./Mixin.scss" as mixin;
+
+
+.categories {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+//   flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category-btn{
+    @include mixin.cat-btn;
+    &.selected{
+        border: none;
+        background-color: vars.$yellow;
+    }
+}
+
+

@@ -1,14 +1,14 @@
 import React from "react";
-import './All.css';
+import '../styles/Categories.scss'
 
 const Categories = ({ categories, selectedId, onSelect }) => {
   return (
-    <div className="flex-row">
+    <div className="categories">
       {categories.map((cat) => (
         <button
           key={cat.id}
           onClick={() => onSelect(cat.id)}
-          className={`category-btn ${selectedId === cat.id ? "selected-category" : ""}`}
+          className={`category-btn ${selectedId === cat.id ? "selected" : ""}`}
         >
           {cat.name}
         </button>

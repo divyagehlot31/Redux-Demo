@@ -1,10 +1,18 @@
 #root {
-  width: 420px;
-  margin: 0 auto;
-  text-align: center;
+
+  width: 430px;
+  margin: 20px auto;
+  /* text-align: center; */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  height: 90vh;
+  height: 95vh;
   border-radius: 10px;
+  position: relative;
+  background-color: white;
+  overflow-y: hidden;
+  font-family: "Ancizar Sans", sans-serif;  
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  z-index: 999; 
+  /* overflow-y: visible; */
 }
  
 /* 

@@ -1,0 +1,19 @@
+@use "./Variables.scss" as vars;
+@use "./Mixin.scss" as mixin;
+
+
+.subcat-btn{
+    @include mixin.subcat-btn;
+}
+
+.subcat-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+//   padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.selected{
+  border-bottom: 2px solid vars.$yellow;
+}

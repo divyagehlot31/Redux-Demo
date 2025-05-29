@@ -1,5 +1,7 @@
 import React from "react";
-import './All.css';
+// import './All.css';
+import '../styles/SubCategories.scss'
+
 
 const SubCategories = ({ subcategories, selectedId, onSelect }) => {
   return (
@@ -8,7 +10,7 @@ const SubCategories = ({ subcategories, selectedId, onSelect }) => {
         <button
           key={sub.id}
           onClick={() => onSelect(sub.id)}
-          className={`subcat-btn ${selectedId === sub.id ? "selected-subcategory" : ""}`}
+          className={`subcat-btn ${selectedId === sub.id ? "selected" : ""}`}
         >
           {sub.name}
         </button>

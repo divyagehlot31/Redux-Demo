@@ -4,7 +4,7 @@ import { categories } from '../Data/categories.json';
 import Categories from "./Categories";
 import SubCategories from "./SubCategories";
 import ProductList from "./ProductList";
-import './All.css'; 
+// import './All.css'; 
 
 const MainMenu = () => {
   const mainCategories = categories.filter((cat) => cat.parent === null);

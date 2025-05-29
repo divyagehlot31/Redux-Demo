@@ -1,0 +1,213 @@
+@use "./Variables.scss" as vars;
+@use "./Mixin.scss" as mixin;
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  // position: absolute;
+  // bottom: 0;
+  // // top:0;
+  // left: 0;
+  //   right: 0;
+  // width: 100%;
+  // z-index: 1;
+  // display: flex;
+  // align-items: flex-end;
+  // background-color: rgba(0, 0, 0, 0.4);
+    // justify-content: center;
+}
+
+.card {
+    width: 100%;
+  min-height: 75%;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 16px;
+  overflow-y: auto;
+  // background: vars.$white;
+  // padding: 20px;
+  // border-radius: 20px;
+  // width: 100%;
+  // max-height: 60vh;
+  // overflow-y: auto;
+  // display: flex;
+  // flex-direction: column;
+}
+.bottom-modal {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+ 
+.bottom-container {
+  width: 100%;
+  min-height: 75%;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.ptitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+
+.ptitle h5 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.close-btn {
+  font-size: 30px;
+  font-weight: 800;
+  border: transparent;
+  border-radius: 10px;
+  background: vars.$yellow;
+  cursor: pointer;
+  color: vars.$black;
+}
+
+.variants-section {
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 8px;
+}
+
+.variants-section h4 {
+    margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.variant-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.variant-btn {
+  padding: 0 8px;
+  border: 2px solid;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-color: vars.$yellow;
+}
+
+
+.variant-btn.selected {
+  background-color: vars.$yellow;
+  color: vars.$black;
+  border-color: none;
+}
+
+.extras-section {
+  border-bottom: 2px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+
+.extras-section h4 {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.extra-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+//   margin: 6px 0;
+  font-size: 18px;
+    font-weight: 600;
+  padding: 6px 0;
+}
+
+// .extra-option input[type="checkbox"] {
+//   transform: scale(2);
+//   cursor: pointer;
+// //   background-color: vars.$yellow !important;
+// }
+
+.extra-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+//   border-color:vars.$yellow ;
+  accent-color: vars.$yellow;
+  cursor: pointer;
+}
+
+.quantity-section {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+    display: flex;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+//   border: 1px solid vars.$yellow;
+  background:vars.$yellow;
+  border-radius: 10px;
+}
+
+.qty-display {
+  min-width: 40px;
+  text-align: center;
+//   padding: 8px;
+  font-size: 30px;
+  font-weight: 600;
+    border: 2px solid vars.$yellow;
+border-radius: 10px;
+}
+
+.add-order-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 0;
+  background-color: vars.$yellow;
+  border: 2px solid vars.$black;
+  color: vars.$black;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
