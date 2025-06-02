@@ -1,11 +1,11 @@
-// import Header from "../components/Header";
+import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 const AppLayout = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> <Header/> */}
       <main className="container mt-4">
         <Outlet />
       </main>

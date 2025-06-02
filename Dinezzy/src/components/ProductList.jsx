@@ -1,55 +1,85 @@
-import React, { useState } from "react";
-import ProductDetailCard from "./ProductDetailCard";
-// import "./All.css";
+import products from "../Data/products.json";
+import { useSelector, useDispatch } from "react-redux";
+import { selectProduct } from '../redux/actions/productActions';
 import "../styles/ProductList.scss";
+import { useState } from "react";
+import ProductDetails from "./ProductDetails";
 
-const ProductList = ({ products }) => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+function ProductList() {
+  const dispatch = useDispatch();
+  const selectedSubCategory = useSelector((state) => state.selectedSubCategory);
+  // const selectedProduct = useSelector((state) => state.selectedProduct);
+const selectedProduct = useSelector((state) => state.selectedProduct.selectedProduct);
 
-  const handleAddOrder = (orderDetails) => {
-    console.log("Order added:", orderDetails);
-    // setSelectedProduct(null);
+  const [selectedVariant, setSelectedVariant] = useState(null);
+  const [selectedExtras, setSelectedExtras] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);  // modal state
+
+  const filteredProducts = products.products.filter(
+    (p) => p.parentId === selectedSubCategory
+  );
+
+  const handleProductClick = (product) => {
+    dispatch(selectProduct(product));
+    setSelectedVariant(null);
+    setSelectedExtras([]);
+    setQuantity(1);
+    setIsModalOpen(true); 
+  };
+
+  const handleExtraChange = (extra) => {
+    const updated = selectedExtras.includes(extra)
+      ? selectedExtras.filter(e => e !== extra)
+      : [...selectedExtras, extra];
+    setSelectedExtras(updated);
+  };
+
+  const handleAddOrder = () => {
+    const order = {
+      productId: selectedProduct.id,
+      name: selectedProduct.name,
+      variant: selectedVariant,
+      extras: selectedExtras,
+      quantity,
+    };
+    console.log("Order Added:", order);
+    setIsModalOpen(false); 
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
-    <div className="product-scroll">
-      {products.length > 0 ? (
-        products.map((prod) => (
-          // <div
-          //   key={prod.id}
-          //   className="product-card"
-          //   onClick={() => setSelectedProduct(prod)}
-          // >
-          //   <h5>{prod.name} - £{prod.price}</h5>
-          //   <p className="text">{prod.description}</p>
-          // </div>
-          <div
-            key={prod.id}
-            className="product-card"
-            onClick={() => setSelectedProduct(prod)}
-          >
+    <div>
+      <div className="product-scroll">
+        {filteredProducts.map((p) => (
+          <div key={p.id} className="product-card" onClick={() => handleProductClick(p)}>
             <div className="product-info">
-              <h5>{prod.name}</h5>
-              <p className="text">{prod.description}</p>
+              <h5>{p.name}</h5>
+              <p className="text">{p.description}</p>
             </div>
-            <div className="product-price">
-              <p>£{prod.price}</p>
-            </div>
+            <div className="product-price">£{p.price}</div>
           </div>
-        ))
-      ) : (
-        <p>No products found.</p>
-      )}
+        ))}
+      </div>
 
-      {selectedProduct && (
-        <ProductDetailCard
+      {isModalOpen && selectedProduct && (
+        <ProductDetails
           product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-          onAdd={handleAddOrder}
+          selectedVariant={selectedVariant}
+          setSelectedVariant={setSelectedVariant}
+          selectedExtras={selectedExtras}
+          handleExtraChange={handleExtraChange}
+          quantity={quantity}
+          setQuantity={setQuantity}
+          handleAddOrder={handleAddOrder}
+          onClose={closeModal}
         />
       )}
     </div>
   );
-};
+}
 
 export default ProductList;
