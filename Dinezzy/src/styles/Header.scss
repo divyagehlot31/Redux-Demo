@@ -2,11 +2,22 @@
 
 .header {
   display: flex;
-  gap: 2px;
   justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px;
+  position: relative;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
+  text-align: center;
+
   font-size: 30px;
   font-weight: 800;
   margin-top: 10px;
@@ -15,8 +26,79 @@
 
 .add {
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.lang-toggle {
+  .lang-icon {
+    font-size: 30px;
+    color: #1a052a;
+    padding: 10px;
+    border: 3px solid vars.$yellow;
+    border-radius: 10px;
+    top: 20%;
+    right: 2%;
+    cursor: pointer;
+    position: absolute;
+  }
+}
+
+.logo1, .logo2 , .logo3 , .logo4{
+  width: 40px;
+  height: 40px;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 0 115px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  // width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  button {
+    margin: 8px;
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 3px solid;
+    border-color: vars.$yellow;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    // justify-content:flex-start;
+    gap: 15px;
+
+    .img{
+      padding-left: 40px;
+    }
+
+  
+  }
 }

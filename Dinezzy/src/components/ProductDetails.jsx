@@ -1,6 +1,8 @@
 import React from "react";
+import {  FormattedMessage } from "react-intl"; 
+
 // import "bootstrap/dist/css/bootstrap.css";
-import '../styles/ProductDetailsCard.scss';
+import "../styles/ProductDetailsCard.scss";
 
 function ProductDetails({
   product,
@@ -27,15 +29,19 @@ function ProductDetails({
 
   return (
     <div className="card-overlay" onClick={onClose}>
-      <div className="card" onClick={e => e.stopPropagation()}>
+      <div className="card" onClick={(e) => e.stopPropagation()}>
         <div className="ptitle">
           <h5>{product.name}</h5>
-          <button className="close-btn" onClick={onClose}>X</button>
+          <button className="close-btn" onClick={onClose}>
+            X
+          </button>
         </div>
 
         {product.variants && (
           <div className="variants-section">
-            <h4>Variants:</h4>
+            <h4>
+              <FormattedMessage id="size" />
+            </h4>
             <div className="variant-buttons">
               {product.variants.map((v, index) => (
                 <label
@@ -52,7 +58,9 @@ function ProductDetails({
                     checked={selectedVariant?.name === v.name}
                     style={{ display: "none" }}
                   />
-                  <span>{v.name} (£{v.price})</span>
+                  <span>
+                    {v.name} (£{v.price})
+                  </span>
                 </label>
               ))}
             </div>
@@ -61,29 +69,45 @@ function ProductDetails({
 
         {product.extras && (
           <div className="extras-section">
-            <h4>Extras:</h4>
+            <h4>
+              <FormattedMessage id="select_options" />
+            </h4>
             {product.extras.map((e, index) => (
               <label key={index} className="extra-option">
+                <span>
+                  {e.name} (£{e.price})
+                </span>
+
                 <input
                   type="checkbox"
                   value={e.name}
                   onChange={() => handleExtraChange(e)}
                   checked={selectedExtras.includes(e)}
                 />
-                <span>{e.name} (£{e.price})</span>
               </label>
             ))}
           </div>
         )}
 
         <div className="quantity-section">
-          <button className="qty-btn" onClick={() => setQuantity(prev => Math.max(1, prev - 1))}>-</button>
+          <button
+            className="qty-btn"
+            onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
+          >
+            -
+          </button>
           <div className="qty-display">{quantity}</div>
-          <button className="qty-btn" onClick={() => setQuantity(prev => prev + 1)}>+</button>
+          <button
+            className="qty-btn"
+            onClick={() => setQuantity((prev) => prev + 1)}
+          >
+            +
+          </button>
         </div>
 
         <button className="add-order-btn" onClick={onAddOrderClick}>
-          Add Order
+          {/* Add To Order */}
+          <FormattedMessage id="add_order"/>
         </button>
       </div>
     </div>

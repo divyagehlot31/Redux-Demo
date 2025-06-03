@@ -1,20 +1,25 @@
+// components/ProductList.jsx
 import products from "../Data/products.json";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProduct } from '../redux/actions/productActions';
+import { addToCart } from '../redux/actions/cartAction';
 import "../styles/ProductList.scss";
 import { useState } from "react";
 import ProductDetails from "./ProductDetails";
+import SimpleCartView from "./ViewCart";
 
 function ProductList() {
   const dispatch = useDispatch();
+    const selectedCategory = useSelector((state) => state.selectedCategory);
+
   const selectedSubCategory = useSelector((state) => state.selectedSubCategory);
-  // const selectedProduct = useSelector((state) => state.selectedProduct);
-const selectedProduct = useSelector((state) => state.selectedProduct.selectedProduct);
+  const selectedProduct = useSelector((state) => state.selectedProduct.selectedProduct);
 
   const [selectedVariant, setSelectedVariant] = useState(null);
   const [selectedExtras, setSelectedExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
-  const [isModalOpen, setIsModalOpen] = useState(false);  // modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const filteredProducts = products.products.filter(
     (p) => p.parentId === selectedSubCategory
@@ -22,10 +27,13 @@ const selectedProduct = useSelector((state) => state.selectedProduct.selectedPro
 
   const handleProductClick = (product) => {
     dispatch(selectProduct(product));
-    setSelectedVariant(null);
+    
+    const defaultVariant = product.variants && product.variants.length > 0 ? product.variants[0] : null;
+    setSelectedVariant(defaultVariant);
+    
     setSelectedExtras([]);
     setQuantity(1);
-    setIsModalOpen(true); 
+    setIsModalOpen(true);
   };
 
   const handleExtraChange = (extra) => {
@@ -35,20 +43,47 @@ const selectedProduct = useSelector((state) => state.selectedProduct.selectedPro
     setSelectedExtras(updated);
   };
 
+  // const handleAddOrder = () => {
+  //   const orderItem = {
+  //     productId: selectedProduct.id,
+  //     name: selectedProduct.name,
+  //     basePrice: selectedProduct.price,
+  //     variant: selectedVariant,
+  //     extras: selectedExtras,
+  //     quantity,
+  //   };
+    
+  //   dispatch(addToCart(orderItem));
+  //   console.log("Order Added:", orderItem);
+    
+  //   setIsModalOpen(false);
+  //   setIsCartOpen(true);
+  // };
   const handleAddOrder = () => {
-    const order = {
-      productId: selectedProduct.id,
-      name: selectedProduct.name,
-      variant: selectedVariant,
-      extras: selectedExtras,
-      quantity,
-    };
-    console.log("Order Added:", order);
-    setIsModalOpen(false); 
+  const orderItem = {
+    productId: selectedProduct.id,
+    name: selectedProduct.name,
+    basePrice: selectedProduct.price,
+    variant: selectedVariant,
+    extras: selectedExtras,
+    quantity,
+    categoryId: selectedCategory 
   };
+  
+  dispatch(addToCart(orderItem));
+  console.log("Order Added:", orderItem);
+
+  setIsModalOpen(false);
+  setIsCartOpen(true);
+};
+
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const closeCart = () => {
+    setIsCartOpen(false);
   };
 
   return (
@@ -77,6 +112,10 @@ const selectedProduct = useSelector((state) => state.selectedProduct.selectedPro
           handleAddOrder={handleAddOrder}
           onClose={closeModal}
         />
+      )}
+
+      {isCartOpen && (
+        <SimpleCartView onClose={closeCart} />
       )}
     </div>
   );
