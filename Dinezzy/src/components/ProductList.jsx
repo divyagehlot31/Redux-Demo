@@ -1,4 +1,3 @@
-// components/ProductList.jsx
 import products from "../Data/products.json";
 import { useSelector, useDispatch } from "react-redux";
 import { selectProduct } from '../redux/actions/productActions';
@@ -76,7 +75,6 @@ function ProductList() {
   setIsModalOpen(false);
   setIsCartOpen(true);
 };
-
 
   const closeModal = () => {
     setIsModalOpen(false);

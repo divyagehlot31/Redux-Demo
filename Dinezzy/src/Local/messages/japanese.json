@@ -1,7 +1,14 @@
 {
   "size": "サイズ",
   "select_options": "オプションを選択",
-  "add_order" : "注文に追加",
-    "view_basket" : "バスケットを見る",
-  "item" : "アイテム"
+  "add_order": "注文に追加",
+  "view_basket": "バスケットを見る",
+  "item": "アイテム",
+  "checkout": "チェックアウト",
+  "add-notes": "メモを追加",
+  "table-number": "テーブル番号",
+  "confirm-order": "注文を確認する",
+  "confirmation-text": "この注文を行うことで、あなたがキングスアームズにいて18歳以上であることに同意したことになります。",
+  "cancel": "キャンセル",
+  "place-order": "注文する"
 }

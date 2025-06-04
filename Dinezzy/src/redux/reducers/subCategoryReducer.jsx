@@ -12,3 +12,4 @@ const subCategoryReducer = (state = initialState, action) => {
 };
 
 export default subCategoryReducer;
+

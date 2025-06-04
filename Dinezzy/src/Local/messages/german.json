@@ -1,7 +1,14 @@
 {
-    "size": "Größe",
-    "select_options": "Optionen auswählen",
-    "add_order": "Zur Bestellung hinzufügen",
-    "view_basket": "Warenkorb anzeigen",
-    "item": "Artikel"
+  "size": "Größe",
+  "select_options": "Optionen auswählen",
+  "add_order": "Zur Bestellung hinzufügen",
+  "view_basket": "Warenkorb anzeigen",
+  "item": "Artikel",
+  "checkout": "Zur Kasse",
+  "add-notes": "Notizen hinzufügen",
+  "table-number": "Tischnummer",
+  "confirm-order": "BESTELLUNG BESTÄTIGEN",
+  "confirmation-text": "Mit dem Absenden dieser Bestellung bestätigen Sie, dass Sie sich im Kings Arms befinden und über 18 Jahre alt sind.",
+  "cancel": "ABBRECHEN",
+  "place-order": "BESTELLUNG AUFGEBEN"
 }

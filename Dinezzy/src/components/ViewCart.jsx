@@ -10,6 +10,8 @@ function CartView({ onClose }) {
 
   if (totalItems === 0) return null;
 
+  // const item = pr
+
   const handleCheckout = () => {
     if (onClose) onClose(); 
     navigate('/checkout');
