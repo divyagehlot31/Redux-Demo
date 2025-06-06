@@ -52,7 +52,6 @@ function Checkout() {
     return acc;
   }, {});
 
-  
   if (totalItems === 0) {
     return (
       <div className="checkout-container">
